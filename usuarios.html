@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios Registrados</title>
+    <link rel="stylesheet" href="styleusuario.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Usuarios Registrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre de Usuario</th>
+                    <th>Contraseña</th>
+                </tr>
+            </thead>
+            <tbody id="usuariosList">
+                <!-- Los usuarios se cargarán aquí -->
+            </tbody>
+        </table>
+        <button id="btn_limpiar">Limpiar Usuarios</button> <!-- Botón para limpiar -->
+    </div>
+
+    <script>
+        // Función para mostrar usuarios en la lista
+        function mostrarUsuarios() {
+            const usuariosList = document.getElementById("usuariosList");
+            const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+            // Limpiar la lista actual
+            usuariosList.innerHTML = "";
+
+            // Iterar sobre el array de usuarios y agregar cada uno a la lista
+            usuarios.forEach(usuario => {
+                const tr = document.createElement("tr");
+                const tdUsuario = document.createElement("td");
+                const tdContraseña = document.createElement("td");
+
+                tdUsuario.textContent = usuario.usuario;
+                tdContraseña.textContent = usuario.contraseña;
+
+                tr.appendChild(tdUsuario);
+                tr.appendChild(tdContraseña);
+                usuariosList.appendChild(tr);
+            });
+        }
+
+        // Función para limpiar los usuarios
+        function limpiarUsuarios() {
+            localStorage.removeItem("usuarios"); // Eliminar usuarios del localStorage
+            mostrarUsuarios(); // Actualizar la lista
+        }
+
+        // Llamar a la función para mostrar los usuarios
+        mostrarUsuarios();
+
+        // Escuchar el evento del botón de limpiar
+        document.getElementById("btn_limpiar").addEventListener("click", limpiarUsuarios);
+    </script>
+</body>
+</html>

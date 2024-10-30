@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <img src="Imagenes/BancoNacionLogo.png" alt="Logo" class="logo">
+        <nav class="nav-links">
+            <a href="#">Preguntas Frecuentes</a>
+            <a href="#">Información de Home Banking</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Seguridad del Sistema</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="login-container">
+            <h2>Bienvenido al <br><strong>Home Banking</strong></h2>
+            <form id="usuarioForm"> <!-- Añadir id aquí -->
+                <div class="campos">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                    <button class="ayuda">?</button>
+                </div>
+                <div class="campos">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                    <button class="ayuda">?</button>
+                </div>
+                <button type="submit" class="btn_ingresar" id="btn_ingresar">INGRESAR</button>
+                <div class="links-inferiores">
+                    <a href="#">¿Primera vez que ingresás?</a>
+                    <a href="#">¿Acceso bloqueado?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="text">
+                <p><strong>ALERTA!</strong> Banco Nación, nunca iniciará un contacto o conversación, ni le pedirá que informe o confirme sus claves, pin, token u otros datos sensibles, a través de redes sociales, correo electrónico, mensaje de WhatsApp, mensaje de texto o llamado telefónico.</p>
+                <p>#EVITEMOS LAS ESTAFAS VIRTUALES</p>
+                <p>En caso de haber sufrido una estafa comuníquese al (011) 4319-5465 (o canal oficial correspondiente).</p>
+            </div>
+            <div class="logos">
+                <img src="Imagenes/CURS-3.0.png" alt="CertiSur Logo">
+                <img src="Imagenes/logo_link.jpg" alt="Link Logo">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

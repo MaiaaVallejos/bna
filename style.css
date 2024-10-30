@@ -1,0 +1,202 @@
+/* Estilo general del cuerpo de la página */ 
+body {
+    background-image: url('Imagenes/FondoLoginBanco.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center top;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo del encabezado */
+header {
+    background: #0087ab; /* Color de fondo celeste para el encabezado */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 65px; /* Establece la altura del encabezado */
+    display: flex; /* Utiliza un modelo de caja flexible */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra todo el contenido horizontalmente */
+    box-shadow: 0 0 5px #000; /* Agrega una sombra sutil al encabezado */
+    position: fixed; /* Fija el encabezado en la parte superior de la ventana */
+    top: 0; /* Posiciona el encabezado en la parte superior */
+    left: 0; /* Asegura que el encabezado esté alineado al borde izquierdo */
+    z-index: 1000; /* Asegura que el encabezado esté en la parte superior de otros elementos */
+    padding: 0 20px; /* Espacio interno a los lados del encabezado */
+}
+
+/* Ajustes del logo */
+header .logo {
+    margin-right: 65px; /* Añade margen derecho para separar del menú */
+    display: flex; /* Asegura que el logo esté alineado */
+    align-items: center; /* Centra verticalmente el logo */
+}
+
+/* Ajustes del menú */
+header nav {
+    display: flex;
+    gap: 20px; /* Añade un espacio entre los ítems del menú */
+}
+
+/* Estilo del logo */
+.logo {
+    width: 248.9px;
+    height: auto;
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-links {
+    display: flex;
+    gap: 30px; /* Espacio más amplio entre enlaces */
+    margin-right: 50px; /* Alineación hacia la derecha */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 11.5px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+/* Estilo del contenedor del formulario de inicio de sesión */
+.login-container {
+    position: absolute; /* Posición absoluta para mover el cuadro */
+    top: 20%; /* Ajuste hacia arriba */
+    right: 15%; /* Ajuste hacia la derecha */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los campos de entrada */
+.campos {
+    width: 100%;
+    position: relative;
+}
+
+.campos input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.campos label {
+    color: black; /* Cambia el texto "Usuario" y "Contraseña" a negro */
+}
+
+/* Estilo del botón de ayuda */
+.ayuda {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #0056b3;
+    font-size: 14px;
+}
+
+/* Botón de ingresar */
+.btn_ingresar {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    border-radius: 0;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn_ingresar:hover {
+    background-color: #004a99;
+}
+
+/* Enlaces inferiores */
+.links-inferiores {
+    margin-top: 20px;
+}
+
+.links-inferiores a {
+    color: #0056b3;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.links-inferiores a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: white;
+    padding: 5px;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-content p {
+    color: #0056b3;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logos img {
+    max-width: 70px;
+    height: auto;
+    margin-bottom: 1px;
+}
